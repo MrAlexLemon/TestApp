@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  sqlserver:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: sqlserver1
+    restart: unless-stopped
+    environment:
+      SA_PASSWORD: "password123Admin789"
+      ACCEPT_EULA: "Y"
+    ports:
+       - "1433:1433"
