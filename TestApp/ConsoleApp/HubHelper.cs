@@ -1,5 +1,4 @@
-﻿using Common.Interfaces;
-using Common.Models;
+﻿using ConsoleApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

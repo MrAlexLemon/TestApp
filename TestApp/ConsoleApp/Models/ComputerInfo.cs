@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Common.Models
+namespace ConsoleApp.Models
 {
     public class ComputerInfo
     {
@@ -10,6 +10,5 @@ namespace Common.Models
         public string TimeZone { get; set; }
         public string OsName { get; set; }
         public string DotNetVersion { get; set; }
-        public ComputerStatus ComputerStatus { get; set; }
     }
 }

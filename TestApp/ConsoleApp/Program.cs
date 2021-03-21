@@ -1,6 +1,7 @@
-﻿using Common.Models;
+﻿using ConsoleApp.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
@@ -11,20 +12,21 @@ namespace ConsoleApp
     {
         static async Task Main(string[] args)
         {
-            var connection = new HubConnectionBuilder()
-                .WithUrl(HubHelper.HubUrl)
-                .WithAutomaticReconnect(new[] { TimeSpan.Zero, TimeSpan.Zero, TimeSpan.FromSeconds(10) })
-                .Build();
-
-           
             ComputerInfo computerInfo = new ComputerInfo
             {
                 ComputerName = Environment.MachineName.ToString(),
                 TimeZone = TimeZone.CurrentTimeZone.GetUtcOffset(DateTime.Now).ToString(),
                 OsName = System.Environment.OSVersion.Platform.ToString(),
                 DotNetVersion = Assembly.GetEntryAssembly()?.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName,
-                ComputerStatus = new ComputerStatus() { Date = DateTime.UtcNow, IsOnline = true }
             };
+
+            var connection = new HubConnectionBuilder()
+                .WithUrl(HubHelper.HubUrl, options =>
+                {
+                    options.Headers["ComputerName"] = Environment.MachineName.ToString();
+                })
+                .WithAutomaticReconnect(new[] { TimeSpan.Zero, TimeSpan.Zero, TimeSpan.FromSeconds(10) })
+                .Build();
 
             connection.On(HubHelper.Events.PingEvent, async () =>
             {

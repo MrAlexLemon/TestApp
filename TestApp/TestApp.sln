@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService", "WebService\WebService.csproj", "{83C29365-1CE5-4053-B181-F5E1817DC618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessComputerInfoFunction", "ProcessComputerInfoFunction\ProcessComputerInfoFunction.csproj", "{73E213BC-CFFC-4559-815B-CD513FB2C096}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{26C59802-1319-4AC7-A7B2-95562FE57B92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessComputerInfoFunction", "ProcessComputerInfoFunction\ProcessComputerInfoFunction.csproj", "{73E213BC-CFFC-4559-815B-CD513FB2C096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{73E213BC-CFFC-4559-815B-CD513FB2C096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E213BC-CFFC-4559-815B-CD513FB2C096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73E213BC-CFFC-4559-815B-CD513FB2C096}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26C59802-1319-4AC7-A7B2-95562FE57B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26C59802-1319-4AC7-A7B2-95562FE57B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26C59802-1319-4AC7-A7B2-95562FE57B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26C59802-1319-4AC7-A7B2-95562FE57B92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

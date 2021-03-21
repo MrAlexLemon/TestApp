@@ -1,11 +1,11 @@
-﻿using Common.Interfaces;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using WebService.Interfaces;
 
 namespace WebService.Hubs
 {
@@ -23,7 +23,7 @@ namespace WebService.Hubs
             {
                 Console.WriteLine("Ping!");
                 await _serviceHub.Clients.All.Ping();
-                await Task.Delay(3000);
+                await Task.Delay(60000*5);
             }
         }
     }

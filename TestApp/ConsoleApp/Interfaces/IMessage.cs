@@ -1,10 +1,10 @@
-﻿using Common.Models;
+﻿using ConsoleApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Interfaces
+namespace ConsoleApp.Interfaces
 {
     public interface IMessage
     {
